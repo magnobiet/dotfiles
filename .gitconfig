@@ -1,0 +1,62 @@
+[user]
+  name = Magno Biét
+  email = magno.biet@gmail.com
+
+[core]
+  editor = subl
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  attributesfile = ~/.gitattributes
+
+[color]
+  ui = true
+  grep = auto
+  interactive = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[merge]
+  log = true
+  tool = sublime
+
+[diff]
+  external = ~/diff.py
+
+[push]
+  default = tracking
+
+[alias]
+  last = log -1 HEAD
+  goto = "git checkout "
+  l = log --pretty=custom --abbrev-commit --all
+  lg = log --pretty=custom --abbrev-commit --all --graph
+  pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
+  undo = reset --soft HEAD~1
+  unchanged = update-index --assume-unchanged
+  changed = update-index --no-assume-unchanged
+
+[pretty]
+  custom = "%C(red)%h %C(reset)-%C(yellow bold)%d %C(reset)%s %C(green)(%ar) %C(reset)"
+  #                 │                           │           │            └─ date (relative)
+  #                 │                           │           └─ message
+  #                 │                           │
+  #                 │                           └─ decorations (branch, heads or tags)
+  #                 └─ hash (abbreviated)
+
+[url "https://"]
+  insteadOf = git://

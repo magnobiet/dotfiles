@@ -1,0 +1,15 @@
+alias ..="cd ../"
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias l='ls -lahFG'
+alias lf='ls -lahFG | grep -E "^-|^l"' # only files
+alias lh='ls -lahdFG .??*' # only hidden
+alias update='sudo sh -c "apt-get update; apt-get upgrade -y; apt-get autoremove; apt-get autoclean"'
+alias updatev='sudo apt-get dist-upgrade -y'
+alias syslog='tail -f /var/log/syslog'
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+alias trash="rm -rf ~/.Trash/*"
+alias clock='date "+%A %m/%d -%l:%M %p"'
+alias sshgen='ssh-keygen -t rsa -b 4096'
+alias artisan='php artisan'
+alias homestead='__homestead'
