@@ -19,7 +19,7 @@ Install the public key on your BitBucket <http://bit.ly/1VMnKa3> or GitHub <http
 ### Using Git
 
 ```bash
-git clone git@bitbucket.org:magnobiet/dotfiles.git
+git clone git@github.com:magnobiet/dotfiles.git
 cd dotfiles
 ./install # as super user
 ```
