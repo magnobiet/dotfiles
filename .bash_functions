@@ -136,3 +136,9 @@ function untar() {
 
 }
 
+# https://www.gitignore.io/docs
+function gi() {
+
+  curl -L -s https://www.gitignore.io/api/\$@
+
+}
