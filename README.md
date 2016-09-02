@@ -1,4 +1,4 @@
-# Magno's dotfiles
+# 🐧 Magno's dotfiles
 
 ![Screenshot preview](preview.png)
 
