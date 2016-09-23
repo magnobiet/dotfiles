@@ -1,11 +1,13 @@
-# 🐧 Magno's dotfiles
+# Magno's dotfiles 🐧
+
+> Work on Ubuntu 14.04 LTS and 16.04 LTS
 
 ![Screenshot preview](preview.png)
 
 ## Requirements
 
 ```bash
-apt-get install -y git xclip # as super user
+sudo apt-get install -y git xclip
 ssh-keygen -t rsa -b 4096
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
@@ -19,13 +21,17 @@ Install the public key on your BitBucket <http://bit.ly/1VMnKa3> or GitHub <http
 ### Using Git
 
 ```bash
-git clone git@github.com:magnobiet/dotfiles.git
-cd dotfiles
-./install # as super user
+# Using HTTPS
+git clone https://github.com/magnobiet/dotfiles.git && cd $_
+
+# Using SSH
+git clone git@github.com:magnobiet/dotfiles.git && cd $_
+
+sudo ./install
 ```
 
 ![Screenshot](screenshot.png)
 
 ## License
 
-[MIT](https://magno.mit-license.org/)
+Licensed under the [MIT License](https://magno.mit-license.org/2016).
