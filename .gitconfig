@@ -49,14 +49,12 @@
   undo = reset --soft HEAD~1
   unchanged = update-index --assume-unchanged
   changed = update-index --no-assume-unchanged
+  resolve-mine = checkout --ours
+  resolve-theirs = checkout --theirs
+  revert = reset --soft HEAD~1
 
 [pretty]
   custom = "%C(red)%h %C(reset)-%C(yellow bold)%d %C(reset)%s %C(green)(%ar) %C(reset)"
-  #                 │                           │           │            └─ date (relative)
-  #                 │                           │           └─ message
-  #                 │                           │
-  #                 │                           └─ decorations (branch, heads or tags)
-  #                 └─ hash (abbreviated)
 
 [url "https://"]
   insteadOf = git://
