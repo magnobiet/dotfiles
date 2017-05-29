@@ -16,7 +16,7 @@ fi
 TITLE="Magno's dotfiles"
 USER_NAME=$SUDO_USER
 USER_HOME=/home/$USER_NAME
-FILES=".bash_aliases .bash_functions .editorconfig .gitconfig .gitignore .iftoprc .htoprc .vimrc .npmrc diff.py"
+FILES=".bash_aliases .bash_functions .editorconfig .gitconfig .gitignore .gitmessage .iftoprc .htoprc .vimrc .npmrc diff.py"
 
 source utils
 
