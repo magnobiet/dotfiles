@@ -1,0 +1,24 @@
+#!/bin/bash
+
+clear
+
+if [ ! "$(which shellcheck)" ]; then
+  sudo apt-get install -y shellcheck
+fi
+
+if [ ! "$(which travis)" ]; then
+  sudo gem install travis --no-rdoc --no-ri
+fi
+
+clear
+
+echo -e "Linting Travis\n"
+travis lint .travis.yml
+
+echo -e "\nLinting Shell\n"
+shellcheck --shell=bash --exclude=SC1091,SC2016,SC2069 install utils lint
+
+cd files/
+shellcheck --shell=bash .bash_aliases .bash_functions
+
+echo

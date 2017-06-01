@@ -1,22 +1,24 @@
 #!/bin/bash
 
 function comment() {
-  sed -i "$2 s/^/#/" $1
+  sed -i "$2 s/^/#/" "$1"
 }
 
 function uncomment() {
-  sed -i "$2 s/^##*//" $1
+  sed -i "$2 s/^##*//" "$1"
 }
 
 function addline() {
-  sed -i "$2i\\$3" $1
+  sed -i "$2i\\$3" "$1"
 }
 
 function log() {
 
   # Log levels <https://git.io/vrqY6>
 
-  local log_date=`date "+%Y-%m-%d %H:%M:%S"`
+  local log_date
+  log_date="$(date "+%Y-%m-%d %H:%M:%S")"
+
   echo "[$log_date] dotfiles.$2: $1" >> dotfiles.log
 
 }
