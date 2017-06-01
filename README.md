@@ -1,5 +1,8 @@
 # Magno's dotfiles 🐧
 
+[![MIT Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://magno.mit-license.org/)
+[![Build Status](https://travis-ci.org/magnobiet/dotfiles.svg?branch=feature/lint)](https://travis-ci.org/magnobiet/dotfiles)
+
 > Work on Ubuntu 14.04 LTS and 16.04 LTS
 
 ![Screenshot preview](preview.png)
