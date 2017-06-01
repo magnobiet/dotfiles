@@ -6,4 +6,7 @@ addons:
     packages:
     - shellcheck
 script:
-  - shellcheck install utils
+- shellcheeck install utils
+notifications:
+  slack:
+    secure: o7EVkhrf7C2OcB4NCjkaZipO18EDQoV7IC7XN6fc+30oe82pJeU+Owa59KXrF/NREQDWXhllwS6U+DKTtFuu5x7BiPxXLApxNGzHobyPboCb+blNEd/inMLS/acv499cD/03pH2L4+1NTY8vko96gUIDk27c+B7Xc+mYm8SQhmbS8BTY0bmUM6yjGN8kTMz/zKHE6qvHPPNQFAtsYKf4POVZd8U9YEAynbmxOTTvNd2tpGqgrozvCB0Xl0tF710CjozADpO2OqcY/sV+nL4EuZd2MG+AqPf/CWGpJFsNKqSc9+MeHABpof2Z9TTZCrbL1aEM+CfPbYHB676YYxl/fJm0SHTAA0RBIOG7X+fZw73KHg4JxrqhMMs0/6+6bKnf2Q82rZxLKVGarR0E+lcDV8qDgo3oa+6OveTu/t5K9GOAVd3DLQ+2jdup/2eRasTA1JEzr3hIqQHdYRY4SZIpGngv27HRHjhRDrynh+RiWhV0Auunl3fj32yYowEChBR2ia8l121C/OnBx518jgG8L8g1COxy5F8HZj+GL/YxWWza4o0o6ZO86PcupzgjhpLF0bAkoTEEedtvUl9VgS6gi3OqtmmOKfsr0Mv5+e6gYn8341arC30raZbDfCEp70JU/fcp9BPSvSTM7R1a1uxwydvSCepY8o5UQ8FGqKGTi8U=
