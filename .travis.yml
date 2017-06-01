@@ -6,4 +6,4 @@ addons:
     packages:
     - shellcheck
 script:
-    - shellcheck install utils
+  - shellcheck install utils
