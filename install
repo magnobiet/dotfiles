@@ -1,9 +1,8 @@
 #!/bin/bash
-# shellcheck disable=SC1091,SC2016,SC2069
 
 clear
 
-if [ "$(id -u)" != 0 ]; then
+if [ `id -u` != 0 ]; then
 
   echo -e '\033[1;31mYou need to be root to perform this action.\033[0m\n'
   exit 1
