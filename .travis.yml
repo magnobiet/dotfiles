@@ -6,4 +6,4 @@ addons:
     packages:
     - shellcheck
 script:
-    - shellcheck --shell=bash --exclude=SC1091,SC2016,SC2069 install utils
+    - shellcheck install utils
