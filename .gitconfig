@@ -42,10 +42,10 @@
 
 [alias]
   last = log -1 HEAD
-  goto = "git checkout "
+  goto = checkout
   l = log --pretty=custom --abbrev-commit --all
   lg = log --pretty=custom --abbrev-commit --all --graph
-  pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
+  sync = !git pull && git push
   undo = reset --soft HEAD~1
   unchanged = update-index --assume-unchanged
   changed = update-index --no-assume-unchanged
