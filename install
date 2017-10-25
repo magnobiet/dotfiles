@@ -84,6 +84,10 @@ function completionIgnoreCase {
 
 function copyDotfiles {
 
+  mkdir -p $USER_HOME/.config/terminator/
+  cp .config/terminator/config $USER_HOME/.config/terminator/config
+  chown $USER_NAME:$USER_NAME $USER_HOME/.config/terminator/config
+
   for f in $FILES; do
 
     cp $f $USER_HOME/$f
