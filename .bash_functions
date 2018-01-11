@@ -161,3 +161,16 @@ function gi() {
   curl -L -s https://www.gitignore.io/api/\$@
 
 }
+
+# Google search 
+function google() {
+
+  search=""
+
+  for term in $@; do
+    search="$search%20$term"
+  done
+
+  x-www-browser "http://www.google.com/search?q=$search"
+
+}
