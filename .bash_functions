@@ -130,7 +130,7 @@ function prompt_git() {
 }
 
 # https://github.com/elgris/dotfiles/blob/master/bash_aliases#L15
-extract() {
+function extract() {
 
   if [ -f $1 ] ; then
 
@@ -162,7 +162,7 @@ function gi() {
 
 }
 
-# Google search 
+# Google search
 function google() {
 
   search=""
@@ -172,5 +172,14 @@ function google() {
   done
 
   x-www-browser "http://www.google.com/search?q=$search"
+
+}
+
+# https://hub.docker.com/r/library/composer/
+function __php_composer() {
+
+  tty=`tty -s && tty=--tty`
+
+  docker run $tty --interactive --rm --user $(id -u):$(id -g) --volume $(pwd):/app composer "$@"
 
 }
