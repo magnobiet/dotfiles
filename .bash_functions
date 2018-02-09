@@ -178,8 +178,16 @@ function google() {
 # https://hub.docker.com/r/library/composer/
 function __php_composer() {
 
-  tty=`tty -s && tty=--tty`
+  echo "Current working directory: '"$(pwd)"'"
 
-  docker run $tty --interactive --rm --user $(id -u):$(id -g) --volume $(pwd):/app composer "$@"
+  docker run \
+    `tty -s && tty=--tty` \
+    --interactive \
+    --rm \
+    --user $(id -u):$(id -g) \
+    --volume /etc/passwd:/etc/passwd:ro \
+    --volume /etc/group:/etc/group:ro \
+    --volume $(pwd):/app \
+    composer "$@"
 
 }
