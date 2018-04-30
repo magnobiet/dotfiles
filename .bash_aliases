@@ -17,6 +17,7 @@ alias clock='date "+%A %m/%d -%l:%M %p"'
 alias sshgen='ssh-keygen -t rsa -b 4096'
 
 # PHP Development
+alias php='__php'
 alias composer='__php_composer'
 ## Laravel
 alias artisan='php artisan'

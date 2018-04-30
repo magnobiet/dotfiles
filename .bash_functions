@@ -191,3 +191,19 @@ function __php_composer() {
     composer "$@"
 
 }
+
+function __php() {
+
+  docker run \
+    --rm \
+    --interactive \
+    --user $(id -u):$(id -g) \
+    --volume /etc/passwd:/etc/passwd:ro \
+    --volume /etc/group:/etc/group:ro \
+    --volume $(pwd):/app \
+    --workdir /app \
+    --network host \
+    magnobiet/php:7.2-cli \
+    php "$@"
+
+}
