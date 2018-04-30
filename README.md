@@ -22,10 +22,10 @@ Install the public key on your BitBucket <http://bit.ly/1VMnKa3> or GitHub <http
 
 ```bash
 # Using HTTPS
-git clone https://github.com/magnobiet/dotfiles.git && cd $_
+git clone https://github.com/magnobiet/dotfiles.git .dotfiles && cd $_
 
 # Using SSH
-git clone git@github.com:magnobiet/dotfiles.git && cd $_
+git clone git@github.com:magnobiet/dotfiles.git .dotfiles && cd $_
 
 sudo ./install
 ```
