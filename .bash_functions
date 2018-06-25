@@ -212,8 +212,18 @@ function __phpstan() {
 
   docker run \
     --rm \
-    -v $PWD:/app \
+    -v $(pwd):/app \
     phpstan/phpstan \
+    "$@"
+
+}
+
+function __phpunit() {
+
+  docker run \
+    --rm \
+    -v $(pwd):/app \
+    phpunit/phpunit \
     "$@"
 
 }
