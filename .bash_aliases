@@ -20,6 +20,7 @@ alias sshgen='ssh-keygen -t rsa -b 4096'
 alias php='__php'
 alias composer='__php_composer'
 alias phpstan='__phpstan'
+alias phpunit='__phpunit'
 ## Laravel
 alias artisan='php artisan'
 alias homestead='__homestead'
