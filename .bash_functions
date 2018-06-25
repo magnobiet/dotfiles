@@ -207,3 +207,13 @@ function __php() {
     php "$@"
 
 }
+
+function __phpstan() {
+
+  docker run \
+    --rm \
+    -v $PWD:/app \
+    phpstan/phpstan \
+    "$@"
+
+}
