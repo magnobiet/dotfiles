@@ -182,6 +182,7 @@ function __php_composer() {
 
   docker run \
     `tty -s && tty=--tty` \
+    --init \
     --interactive \
     --rm \
     --user $(id -u):$(id -g) \
@@ -195,6 +196,7 @@ function __php_composer() {
 function __php() {
 
   docker run \
+    --init \
     --rm \
     --interactive \
     --user $(id -u):$(id -g) \
@@ -211,6 +213,7 @@ function __php() {
 function __phpstan() {
 
   docker run \
+    --init \
     --rm \
     -v $(pwd):/app \
     phpstan/phpstan \
@@ -221,6 +224,7 @@ function __phpstan() {
 function __phpunit() {
 
   docker run \
+    --init \
     --rm \
     -v $(pwd):/app \
     phpunit/phpunit \
