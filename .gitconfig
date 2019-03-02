@@ -3,7 +3,7 @@
   email = magno.biet@gmail.com
 
 [core]
-  editor = subl
+  editor = vim
   excludesfile = ~/.gitignore
   autocrlf = input
   attributesfile = ~/.gitattributes
@@ -32,7 +32,7 @@
 
 [merge]
   log = true
-  tool = sublime
+  tool = vim
 
 [diff]
   external = ~/diff.py
