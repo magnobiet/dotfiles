@@ -24,6 +24,12 @@ Install the public key on your BitBucket <http://bit.ly/1VMnKa3> or GitHub <http
 curl -L https://git.io/fhhLe | sudo bash
 ```
 
+### Using `wget`
+
+```bash
+wget -q -O - https://git.io/fhhLe | sudo bash
+```
+
 ### Or using `git`
 
 ```bash
