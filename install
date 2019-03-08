@@ -124,6 +124,12 @@ function blacklistedMediaPlayers {
 
 }
 
+function generateSSHKey {
+
+  su -c "ssh-keygen -t rsa -b 4096" -s /bin/sh $USER_NAME
+
+}
+
 # DIALOG #######################################################################
 cmd=(dialog --backtitle "$TITLE" --separate-output --checklist "Select" 16 46 9)
 
@@ -135,8 +141,9 @@ options=(
   05 "Copy dotfiles"                   on
   06 "Set completion ignore case"      on
   07 "Configure TimeZone"              off
-  08 "Fix media players indicator"     off
-  09 "Update system"                   off
+  08 "Generate SSH key"                on
+  09 "Fix media players indicator"     off
+  10 "Update system"                   off
 )
 
 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -152,8 +159,9 @@ for choice in $choices; do
     05) copyDotfiles            ;;
     06) completionIgnoreCase    ;;
     07) configTimeZone          ;;
-    08) blacklistedMediaPlayers ;;
-    09) updateSystem            ;;
+    08) generateSSHKey          ;;
+    09) blacklistedMediaPlayers ;;
+    10) updateSystem            ;;
 
   esac
 
