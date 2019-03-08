@@ -130,20 +130,29 @@ function generateSSHKey {
 
 }
 
+function hostsBlacklist {
+
+  if ! grep -q "# Block " /etc/hosts; then
+    curl -L https://git.io/fhhIX | tee -a /etc/hosts >/dev/null
+  fi
+
+}
+
 # DIALOG #######################################################################
 cmd=(dialog --backtitle "$TITLE" --separate-output --checklist "Select" 16 46 9)
 
 options=(
-  01 "Fix Privacy"                     on
-  02 "Reset .bashrc"                   on
-  03 "Default PS1 with Git"            off
-  04 "Alternative PS1 with Git extras" on
-  05 "Copy dotfiles"                   on
-  06 "Set completion ignore case"      on
-  07 "Configure TimeZone"              off
-  08 "Generate SSH key"                on
-  09 "Fix media players indicator"     off
-  10 "Update system"                   off
+  01 "Fix Privacy"                                                on
+  02 "Reset .bashrc"                                              on
+  03 "Default PS1 with Git"                                       off
+  04 "Alternative PS1 with Git extras"                            on
+  05 "Copy dotfiles"                                              on
+  06 "Set completion ignore case"                                 on
+  07 "Configure TimeZone"                                         off
+  08 "Generate SSH key"                                           on
+  09 "Fix media players indicator"                                off
+  10 "Block Microsoft Telemetry, Skype advertising, and Facebook" on
+  11 "Update system"                                              off
 )
 
 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -161,7 +170,8 @@ for choice in $choices; do
     07) configTimeZone          ;;
     08) generateSSHKey          ;;
     09) blacklistedMediaPlayers ;;
-    10) updateSystem            ;;
+    10) hostsBlacklist          ;;
+    11) updateSystem            ;;
 
   esac
 
