@@ -65,11 +65,10 @@ function fs() {
 
 }
 
-# https://laravel.com/docs/5.2/homestead#daily-usage
+# https://laravel.com/docs/5.7/homestead#daily-usage
 function __homestead() {
 
-  cd ~/Homestead
-  vagrant $*
+  ( cd ~/Homestead && vagrant $* )
 
 }
 
