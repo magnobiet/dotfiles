@@ -154,10 +154,10 @@ function extract() {
 
 }
 
-# https://www.gitignore.io/docs
+# https://docs.gitignore.io/install/command-line
 function gi() {
 
-  curl -L -s https://www.gitignore.io/api/\$@
+  curl -L -s https://www.gitignore.io/api/$@
 
 }
 
