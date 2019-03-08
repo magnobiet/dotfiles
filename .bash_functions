@@ -174,13 +174,11 @@ function google() {
 
 }
 
-# https://hub.docker.com/r/library/composer/
+# https://hub.docker.com/_/composer
 function __php_composer() {
 
-  echo "Current working directory: '"$(pwd)"'"
-
   docker run \
-    `tty -s && tty=--tty` \
+     `tty -s && tty=--tty` \
     --init \
     --interactive \
     --rm \
@@ -192,6 +190,7 @@ function __php_composer() {
 
 }
 
+# https://hub.docker.com/r/magnobiet/php
 function __php() {
 
   docker run \
@@ -204,7 +203,7 @@ function __php() {
     --volume $(pwd):/app \
     --workdir /app \
     --network host \
-    magnobiet/php:7.2-cli \
+    magnobiet/php:7.2-cli-alpine \
     php "$@"
 
 }
@@ -214,9 +213,9 @@ function __phpstan() {
   docker run \
     --init \
     --rm \
-    -v $(pwd):/app \
-    phpstan/phpstan \
-    "$@"
+    --user $(id -u):$(id -g) \
+    --volume $(pwd):/app \
+    phpstan/phpstan "$@"
 
 }
 
@@ -225,8 +224,7 @@ function __phpunit() {
   docker run \
     --init \
     --rm \
-    -v $(pwd):/app \
-    phpunit/phpunit \
-    "$@"
+    --volume $(pwd):/app \
+    phpunit/phpunit "$@"
 
 }
