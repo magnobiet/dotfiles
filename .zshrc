@@ -53,7 +53,7 @@ ENABLE_CORRECTION="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -137,3 +137,12 @@ source ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon ssh dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs ip public_ip)
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+# Magno's dotfiles
+if [ -f ~/.bash_functions ]; then
+  . ~/.bash_functions
+fi
+
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
