@@ -21,6 +21,7 @@ alias php='__php'
 alias composer='__php_composer'
 alias phpstan='__phpstan'
 alias phpunit='__phpunit'
+alias phpinsights='__phpinsights'
 ## Laravel
 alias artisan='php artisan'
 alias homestead='__homestead'

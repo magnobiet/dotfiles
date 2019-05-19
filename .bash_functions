@@ -228,3 +228,10 @@ function __phpunit() {
     phpunit/phpunit "$@"
 
 }
+
+
+function __phpinsights() {
+
+  docker run -it --rm -v $(pwd):/app nunomaduro/phpinsights
+
+}
